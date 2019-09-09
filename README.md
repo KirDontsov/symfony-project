@@ -4,6 +4,7 @@
 git clone https://bitbucket.org/imitronov/symfony-project.git
 cd symfony-project
 composer update
+php bin/console doctrine:migrations:migrate
 ~~~
 
 Добавление пользователя
