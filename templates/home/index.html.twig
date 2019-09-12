@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Symfony{% endblock %}
+
+{% block body %}
+<h1>HomePage</h1>
+
+{% if is_granted('ROLE_USER', app.user) %}
+    
+    {% if is_granted('ROLE_ADMIN', app.user) %}
+        <a href="admin">Admin</a><br>
+    {% endif %}
+
+    <a href="logout">Log out ({{ app.user.username }})</a>
+
+{% else %}
+
+    <a href="login">Log in</a>
+
+{% endif %}
+
+{% endblock %}
