@@ -14,7 +14,6 @@ composer require jms/serializer-bundle
 composer require friendsofsymfony/rest-bundle
 composer require generator
 php bin/console make:controller
-php bin/console server:run
 composer require doctrine
 
 mysql -uroot
@@ -31,6 +30,8 @@ php bin/console doctrine:migrations:migrate
 composer req api
 
 php bin/console doctrine:schema:update --force
+
+php bin/console server:run
 
 
 ~~~
