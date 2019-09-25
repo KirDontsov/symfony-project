@@ -30,6 +30,9 @@ php bin/console doctrine:migrations:migrate
 
 composer req api
 
+php bin/console doctrine:schema:update --force
+
+
 ~~~
 
 Добавление пользователя
